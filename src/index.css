@@ -1,13 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+*{
+  background-color: #F5F5F5;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif, 'Merriweather', serif, 'Poiret One', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace,'Merriweather', serif, 'Poiret One', cursive;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  background: #ffffff00;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ff000000;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #30475E; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F5F5F5; 
 }
