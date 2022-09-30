@@ -20,6 +20,9 @@ const Contents = () => {
           </div>
         </div>
       </div>
+      <div>
+        SOMETHING
+      </div>
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <img src="https://placeimg.com/800/200/arch" className="w-full" />
