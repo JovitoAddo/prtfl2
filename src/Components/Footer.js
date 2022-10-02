@@ -13,7 +13,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="bg-customblue ">
-          <span className="text-customwhite text-lg font-poiret bg-customblue">Social</span>
+          <span className="text-customwhite text-lg font-poiret bg-customblue">Socials</span>
           <div className="grid grid-flow-col gap-4 bg-customblue">
             <a href={"https://www.google.com/"} target="_blank">
               <svg

@@ -14,7 +14,7 @@ const Contents = () => {
             <p className="mb-5">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id somethingsomethingsomethingsomethingsomethingsomethingsomethingeditingsomethingeditingsomethingeditingsomethingeditingsomethingeditingsomethingeditingsomethingeditingsomethingeditingsomethingeditingsomethingeditingsomething nisi.
+              et a id somethingsomethingsomethingsomethingsomethingsomethingsomethingeditingsomethingeditingsomethingeditingsomethingseriously dont look at this man nisi.
             </p>
             <button className="btn btn-primary">Get Started</button>
           </div>
