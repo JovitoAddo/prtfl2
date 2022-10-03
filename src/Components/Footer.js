@@ -1,8 +1,10 @@
 import React from "react";
+import Something from "./Something";
 
 const Footer = () => {
   return (
     <div>
+      <Something/>
       <footer className="footer p-10 bg-customblue text-customwhite">
         <div className="bg-customblue">
           <h1 className="text-customwhite bg-customblue font-poiret text-4xl">Logo</h1>

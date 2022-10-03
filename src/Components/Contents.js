@@ -1,8 +1,11 @@
 import React from "react";
+import Something from "./Something";
+
 
 const Contents = () => {
   return (
     <container as="div" className="min-h-screen ">
+      <Something/>
       <div
         className="hero min-h-screen"
         style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}
