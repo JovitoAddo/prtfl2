@@ -1,10 +1,12 @@
 import React from "react";
 import Something from "./Something";
+import Something2 from "./something2";
 
 const Footer = () => {
   return (
     <div>
       <Something/>
+      <Something2/>
       <footer className="footer p-10 bg-customblue text-customwhite">
         <div className="bg-customblue">
           <h1 className="text-customwhite bg-customblue font-poiret text-4xl">Logo</h1>
