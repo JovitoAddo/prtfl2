@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Something from "./Something";
+import Something2 from "./something2";
 
 const Navbar = () => {
   return (
@@ -10,6 +11,7 @@ const Navbar = () => {
           LOGO
         </h1>
 <Something/>
+<Something2/>
         <div className="basis-10/12 bg-transparent"></div>
         <div className="flex gap-1 pl-2 bg-transparent">
           <a
