@@ -9,6 +9,7 @@ const Footer = () => {
       <Something/>
       <Something2/>
       <Something3/>
+      <Something4/>
       <footer className="footer p-10 bg-customblue text-customwhite">
         <div className="bg-customblue">
           <h1 className="text-customwhite bg-customblue font-poiret text-4xl">Logo</h1>
