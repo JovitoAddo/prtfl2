@@ -1,6 +1,8 @@
 import React from "react";
 import Something from "./Something";
 import Something2 from "./something2";
+import Something3 from "./Something3";
+import Something4 from "./something4";
 
 
 const Contents = () => {
@@ -8,6 +10,8 @@ const Contents = () => {
     <container as="div" className="min-h-screen ">
       <Something/>
       <Something2/>
+      <Something3/>
+      <Something4/>
       <div
         className="hero min-h-screen"
         style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}
