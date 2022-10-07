@@ -1,17 +1,9 @@
 import React from "react";
-import Something from "./Something";
-import Something2 from "./something2";
-import Something3 from "./Something3";
-import Something4 from "./something4";
-
+import Swomething from "../Styled/Swomething";
 
 const Contents = () => {
   return (
     <container as="div" className="min-h-screen ">
-      <Something/>
-      <Something2/>
-      <Something3/>
-      <Something4/>
       <div
         className="hero min-h-screen"
         style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}
@@ -21,16 +13,17 @@ const Contents = () => {
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
             <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id somethingsomethingsomethingsomethingsomethingsomethingsomethingeditingsomethingeditingsomethingeditingsomethingseriously dont look at this man nisi.
+              Velit eiusmod amet veniam magna nulla laborum dolor sit nulla
+              occaecat fugiat in. Ut aliquip ea aute commodo consectetur
+              cupidatat deserunt sunt eiusmod est nisi minim excepteur in.
+              Veniam nulla pariatur non consequat voluptate pariatur nisi non
+              dolore. Sit amet incididunt do proident deserunt fugiat esse ut
+              irure sit non cillum.
             </p>
+            <Swomething/>
             <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
-      </div>
-      <div>
-        SOMETHING
       </div>
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
