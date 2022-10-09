@@ -1,8 +1,10 @@
 import React from 'react'
+import Styledes from './Styledes'
 
 const Swomething = () => {
   return (
-    <div>Swomething</div>
+    <div><Styledes/>Swomething</div>
+    
   )
 }
 
