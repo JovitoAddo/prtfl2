@@ -1,6 +1,4 @@
 import React from "react";
-import Styledes from "../Styled/Styledes";
-import Swomething from "../Styled/Swomething";
 
 const Contents = () => {
   return (
@@ -21,8 +19,7 @@ const Contents = () => {
               dolore. Sit amet incididunt do proident deserunt fugiat esse ut
               irure sit non cillum.
             </p>
-            <Swomething/>
-            <Styledes/>
+    
             <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
@@ -73,6 +70,7 @@ const Contents = () => {
           </div>
         </div>
       </div>
+      <Table/>
     </container>
   );
 };
