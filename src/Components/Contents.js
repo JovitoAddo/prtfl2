@@ -19,7 +19,7 @@ const Contents = () => {
               dolore. Sit amet incididunt do proident deserunt fugiat esse ut
               irure sit non cillum.
             </p>
-    
+
             <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
@@ -70,7 +70,20 @@ const Contents = () => {
           </div>
         </div>
       </div>
-      <Table/>
+      <Table />
+      {/* toast */}
+      <div className="toast toast-end">
+        <div className="alert alert-info">
+          <div>
+            <span>New mail arrived.</span>
+          </div>
+        </div>
+        <div className="alert alert-success">
+          <div>
+            <span>Message sent successfully.</span>
+          </div>
+        </div>
+      </div>
     </container>
   );
 };
