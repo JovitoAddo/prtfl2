@@ -1,8 +1,10 @@
 import React from "react";
+import Carousel from "./Carousel";
 
 const Contents = () => {
   return (
     <container as="div" className="min-h-screen ">
+      <Carousel/>
       <Login/>
       <div
         className="hero min-h-screen"
