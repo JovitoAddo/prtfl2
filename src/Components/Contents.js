@@ -1,11 +1,13 @@
 import React from "react";
 import Carousel from "./Carousel";
+import Stats from "./Stats";
 
 const Contents = () => {
   return (
     <container as="div" className="min-h-screen ">
       <Carousel/>
       <Login/>
+      <Stats/>
       <div
         className="hero min-h-screen"
         style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}
