@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "./Carousel";
 import Stats from "./Stats";
+import Iphone from "./Iphone";
 
 const Contents = () => {
   return (
@@ -8,6 +9,7 @@ const Contents = () => {
       <Carousel/>
       <Login/>
       <Stats/>
+      <Iphone/>
       <div
         className="hero min-h-screen"
         style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}
