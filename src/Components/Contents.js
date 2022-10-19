@@ -4,7 +4,7 @@ const Contents = () => {
   return (
     <container as="div" className="min-h-screen ">
       {/* HEADER */}
-      <div
+      {/* <div
         className="hero min-h-screen"
         style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}
       >
@@ -26,7 +26,12 @@ const Contents = () => {
             <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
+      </div> */}
+
+      <div className="min-h-screen">
+        stuff
       </div>
+
       {/* BODY */}
       <div className="grid">
         <div className="flex justify-evenly">
