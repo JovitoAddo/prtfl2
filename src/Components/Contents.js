@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../Assets/logo.png";
 
 const Contents = () => {
   return (
@@ -29,7 +30,23 @@ const Contents = () => {
       </div> */}
 
       <div className="min-h-screen">
-        stuff
+        <iframe
+          className="h-screen w-full cursor-not-allowed"
+          src="https://www.youtube.com/embed/RhdtaX0Pe7Y?controls=0&showinfo=0&autoplay=1&mute=1"
+          showinfo="0"
+          modestbranding="0"
+          loop="1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen
+        ></iframe>
+        <div className="absolute mx-auto top-60 min-h-screen min-w-full bg-transparent grid justify-items-center">
+          <img src={logo} className=" h-80 w-80" />
+          <h1 className="prose text-center font-poiret text-customblack text-4xl bg-transparent">
+            Customize yourself according to what you wants
+          </h1>
+        </div>
       </div>
 
       {/* BODY */}
