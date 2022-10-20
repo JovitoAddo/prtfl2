@@ -1,73 +1,72 @@
 import React from "react";
+import {motion} from "framer-motion" ;
 import logo from "../Assets/logo.png";
+import video from "../Assets/vids.mp4";
+import bp1 from "../Assets/Content/blackpics1.jpg";
+import bp2 from "../Assets/Content/blackpics2.jpg";
+import bp3 from "../Assets/Content/blackpics3.jpg";
+import iw1 from "../Assets/Content/windopics1.jpg";
+import iw2 from "../Assets/Content/windopics2.jpg";
+import iw3 from "../Assets/Content/windopics3.jpg";
 
 const Contents = () => {
   return (
     <container as="div" className="min-h-screen ">
       {/* HEADER */}
-      {/* <div
-        className="hero min-h-screen"
-        style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}
-      >
-        <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-center text-neutral-content rounded-md bg-customblue">
-          <div className="max-w-md bg-transparent">
-            <h1 className="mb-5 text-5xl font-bold bg-transparent">
-              Hello there
-            </h1>
-            <p className="mb-5 bg-transparent">
-              Velit eiusmod amet veniam magna nulla laborum dolor sit nulla
-              occaecat fugiat in. Ut aliquip ea aute commodo consectetur
-              cupidatat deserunt sunt eiusmod est nisi minim excepteur in.
-              Veniam nulla pariatur non consequat voluptate pariatur nisi non
-              dolore. Sit amet incididunt do proident deserunt fugiat esse ut
-              irure sit non cillum.
-            </p>
 
-            <button className="btn btn-primary">Get Started</button>
-          </div>
-        </div>
-      </div> */}
-
-      <div className="min-h-screen">
-        <iframe
-          className="h-screen w-full cursor-not-allowed"
-          src="https://www.youtube.com/embed/RhdtaX0Pe7Y?controls=0&showinfo=0&autoplay=1&mute=1"
-          showinfo="0"
-          modestbranding="0"
-          loop="1"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-          allowfullscreen
-        ></iframe>
-        <div className="absolute mx-auto top-60 min-h-screen min-w-full bg-transparent grid justify-items-center">
-          <img src={logo} className=" h-80 w-80" />
-          <h1 className="prose text-center font-poiret text-customblack text-4xl bg-transparent">
+      <div className="min-h-screen flex justify-center pb-2">
+        <video
+          className="min-w-full object-cover min-h-screen"
+          src={video}
+          autoPlay
+          muted
+          loop
+        />
+        <div className="absolute top-56  object-cover bg-transparent grid justify-items-center">
+          <img src={logo} className=" h-80 w-80 " />
+          <h1 className="prose text-center font-staat text-customwhite pt-2 text-4xl bg-transparent">
             Customize yourself according to what you wants
           </h1>
         </div>
       </div>
 
       {/* BODY */}
-      <div className="grid">
+      <div className="flex mx-auto justify-center prose border-b-8 min-w-full border-t-8 border-customred">
+        <motion.h1 className=" text-center text-5xl transition ">SOMETHING SOMETHING SALES?????</motion.h1>
+      </div>
+      <div className="grid pt-5">
         <div className="flex justify-evenly">
-          <div className="mx-auto">
+          <div className="grid justify-items-center mx-auto">
+            <img src={bp1} className="w-80" />
             <h1>1</h1>
           </div>
-          <div className="mx-auto">
-            <h2>2</h2>
+          <div className="grid justify-items-center mx-auto">
+            <img src={bp2} className="w-80" />
+            <h1>2</h1>
+          </div>
+          <div className="grid justify-items-center mx-auto">
+          <img src={bp3} className="w-80" />
+            <h1>3</h1>
           </div>
         </div>
         <div className="flex justify-evenly">
-          <div>
+        <div className="grid justify-items-center mx-auto">
+            <img src={iw1} className="w-80" />
             <h1>1</h1>
           </div>
-          <div>
-            <h2>2</h2>
+          <div className="grid justify-items-center mx-auto">
+            <img src={iw2} className="w-80" />
+            <h1>2</h1>
+          </div>
+          <div className="grid justify-items-center mx-auto">
+          <img src={iw3} className="w-80" />
+            <h1>3</h1>
           </div>
         </div>
       </div>
+
+
+      
     </container>
   );
 };

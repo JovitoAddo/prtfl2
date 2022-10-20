@@ -1,54 +1,87 @@
 import React from "react";
+import logo from "../Assets/logo_transparent.png";
 
 const Footer = () => {
   return (
     <div>
-  
-      <footer className="footer p-10 bg-customblue text-customwhite">
+      <footer className="flex justify-between footer p-10 bg-customblue text-customwhite">
         <div className="bg-customblue">
-          <h1 className="text-customwhite bg-customblue font-poiret text-4xl">Logo</h1>
-          <p className="bg-customblue font-merriwheater">
-            Something Something Ltd.
-            <br/>
-            Bringing stuff from the past into the future, since 2033
+          <img src={logo} className="bg-transparent h-20" />
+          <p className="bg-customblue font-merriwheater cursor-default">
+            Customize Clothing Company
+            <br />
+            Customize yourself according to what you wants
           </p>
         </div>
-        <div className="bg-customblue ">
-          <span className="text-customwhite text-lg font-poiret bg-customblue">Socials</span>
+    
+        <div className="bg-customblue grid items-end ">
+          <span className="text-customwhite text-xl font-merriwheater bg-customblue cursor-default">
+            Socials
+          </span>
           <div className="grid grid-flow-col gap-4 bg-customblue">
-            <a href={"https://www.google.com/"} target="_blank">
+            <div className="bg-transparent grid items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                className="icon icon-tabler icon-tabler-brand-twitter hover:fill-custombue transition hover:scale-150 hover:stroke-customred bg-transparent hover:cursor-pointer stroke-customwhite"
+                width="44"
+                height="44"
                 viewBox="0 0 24 24"
-                className="fill-current bg-customblue hover:fill-customblack"
+                strokeWidth="1.5"
+                stroke="#30475E"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                onClick={() => {
+                  window.open("https://www.google.com/", "_blank");
+                }}
               >
-                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
               </svg>
-            </a>
-            <a href={"https://www.google.com/"} target="_blank">
+            </div>
+            <div className="bg-transparent grid items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                className="icon icon-tabler icon-tabler-brand-youtube hover:cursor-pointer transition hover:scale-150 hover:fill-customblue hover:stroke-customred bg-transparent stroke-customwhite"
+                width="44"
+                height="44"
                 viewBox="0 0 24 24"
-                className="fill-current bg-customblue hover:fill-customblack"
+                strokeWidth="1.5"
+                stroke="#30475E"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                onClick={() => {
+                  window.open("https://www.google.com/", "_blank");
+                }}
               >
-                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="3" y="5" width="18" height="14" rx="4" />
+                <path d="M10 9l5 3l-5 3z" />
               </svg>
-            </a>
-            <a href={"https://www.google.com/"} target="_blank">
+            </div>
+            <div className="bg-transparent grid items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                className="icon icon-tabler icon-tabler-brand-instagram hover:cursor-pointer transition hover:scale-150 hover:fill-customblue hover:stroke-customred bg-transparent stroke-customwhite"
+                width="44"
+                height="44"
                 viewBox="0 0 24 24"
-                className="fill-current bg-customblue hover:fill-customblack"
+                strokeWidth="1.5"
+                stroke="#30475E"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                onClick={() => {
+                  window.open("https://www.google.com/", "_blank");
+                }}
               >
-                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="4" y="4" width="16" height="16" rx="4" />
+                <circle cx="12" cy="12" r="3" />
+                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
               </svg>
-            </a>
+            </div>
           </div>
         </div>
       </footer>

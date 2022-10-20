@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="bg-transparent grid items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-brand-twitter hover:fill-customwhite transition hover:scale-150 hover:stroke-customred bg-transparent hover:cursor-pointer"
+              className="icon icon-tabler icon-tabler-brand-twitter hover:fill-customblack transition hover:scale-150 hover:stroke-customred bg-transparent hover:cursor-pointer"
               width="44"
               height="44"
               viewBox="0 0 24 24"
@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="bg-transparent grid items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-brand-youtube hover:cursor-pointer transition hover:scale-150 hover:fill-customwhite hover:stroke-customred bg-transparent"
+              className="icon icon-tabler icon-tabler-brand-youtube hover:cursor-pointer transition hover:scale-150 hover:fill-customblack hover:stroke-customred bg-transparent"
               width="44"
               height="44"
               viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ const Navbar = () => {
           <div className="bg-transparent grid items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-brand-instagram hover:cursor-pointer transition hover:scale-150 hover:fill-customwhite hover:stroke-customred bg-transparent"
+              className="icon icon-tabler icon-tabler-brand-instagram hover:cursor-pointer transition hover:scale-150 hover:fill-customblack hover:stroke-customred bg-transparent"
               width="44"
               height="44"
               viewBox="0 0 24 24"
