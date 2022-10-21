@@ -2,12 +2,22 @@ import React from "react";
 import logo from "../Assets/logo_transparent.png";
 
 const Navbar = () => {
+
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-80px";
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
   return (
-    <div className="sticky top-0 h-0 min-w-full z-10">
-      <div className="flex flex-row justify-around bg-transparent backdrop-blur-sm divide-x-2 divide-customblue pl-2 pr-2">
-        {/* <h1 className="text-5xl text-customblue bg-transparent font-poiret pr-2">
-          LOGO
-        </h1> */}
+    <div id="navbar" className="sticky top-0 h-0 min-w-full z-10" style={{ transition: "top 0.3s" }}>
+      <div className="flex flex-row justify-around bg-transparent backdrop-blur-md divide-x-2 divide-customblue pl-2 pr-2">
+        
         <img src={logo} className="h-20 w-20 bg-transparent" />
 
         <div className="basis-10/12 bg-transparent"></div>

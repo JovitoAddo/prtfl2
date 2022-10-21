@@ -1,5 +1,5 @@
 import React from "react";
-import {motion} from "framer-motion" ;
+import { motion } from "framer-motion";
 import logo from "../Assets/logo.png";
 import video from "../Assets/vids.mp4";
 import bp1 from "../Assets/Content/blackpics1.jpg";
@@ -32,8 +32,13 @@ const Contents = () => {
 
       {/* BODY */}
       <div className="flex mx-auto justify-center prose border-b-8 min-w-full border-t-8 border-customred">
-        <motion.h1 className=" text-center text-5xl transition ">SOMETHING SOMETHING SALES?????</motion.h1>
+        <motion.h1 className=" text-center text-5xl transition ">
+          SOMETHING SOMETHING SALES?????
+        </motion.h1>
       </div>
+
+      
+
       <div className="grid pt-5">
         <div className="flex justify-evenly">
           <div className="grid justify-items-center mx-auto">
@@ -45,12 +50,12 @@ const Contents = () => {
             <h1>2</h1>
           </div>
           <div className="grid justify-items-center mx-auto">
-          <img src={bp3} className="w-80" />
+            <img src={bp3} className="w-80" />
             <h1>3</h1>
           </div>
         </div>
         <div className="flex justify-evenly">
-        <div className="grid justify-items-center mx-auto">
+          <div className="grid justify-items-center mx-auto">
             <img src={iw1} className="w-80" />
             <h1>1</h1>
           </div>
@@ -59,14 +64,11 @@ const Contents = () => {
             <h1>2</h1>
           </div>
           <div className="grid justify-items-center mx-auto">
-          <img src={iw3} className="w-80" />
+            <img src={iw3} className="w-80" />
             <h1>3</h1>
           </div>
         </div>
       </div>
-
-
-      
     </container>
   );
 };
