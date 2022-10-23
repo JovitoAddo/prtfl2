@@ -8,14 +8,14 @@ import bp3 from "../Assets/Content/blackpics3.jpg";
 import iw1 from "../Assets/Content/windopics1.jpg";
 import iw2 from "../Assets/Content/windopics2.jpg";
 import iw3 from "../Assets/Content/windopics3.jpg";
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-flip";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { EffectFlip, Pagination, Navigation, EffectCoverflow, EffectCube } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Contents = () => {
   return (
@@ -45,54 +45,71 @@ const Contents = () => {
         </motion.h1>
       </div>
 
-      <Swiper
-        effect={"flip"}
-        grabCursor={true}
-        modules={[EffectFlip]}
-        className="mySwiper w-80"
-      >
-        <SwiperSlide>
-          <img src={bp1} className="w-80"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={bp2} className="w-80" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={bp3} className="w-80" />
-        </SwiperSlide>
-        
-      </Swiper>
-
-      <div className="grid pt-5">
-        <div className="flex justify-evenly">
-          <div className="grid justify-items-center mx-auto">
-            <img src={bp1} className="w-80" />
-            <h1>1</h1>
-          </div>
-          <div className="grid justify-items-center mx-auto">
-            <img src={bp2} className="w-80" />
-            <h1>2</h1>
-          </div>
-          <div className="grid justify-items-center mx-auto">
-            <img src={bp3} className="w-80" />
-            <h1>3</h1>
-          </div>
+      <div className="grid sm:flex justify-items-center justify-around bg-customblue p-2">
+        <div className=" w-60 sm:w-80 rounded-lg">
+          <Swiper
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: true,
+            }}
+            modules={[Autoplay]}
+            className="mySwiper  rounded-lg"
+          >
+            <SwiperSlide>
+              <img src={bp1} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={bp2} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={bp3} />
+            </SwiperSlide>
+          </Swiper>
         </div>
-        <div className="flex justify-evenly">
-          <div className="grid justify-items-center mx-auto">
-            <img src={iw1} className="w-80" />
-            <h1>1</h1>
-          </div>
-          <div className="grid justify-items-center mx-auto">
-            <img src={iw2} className="w-80" />
-            <h1>2</h1>
-          </div>
-          <div className="grid justify-items-center mx-auto">
-            <img src={iw3} className="w-80" />
-            <h1>3</h1>
+        <div className="prose text-center grid items-center bg-transparent text-customwhite">
+          <div className="bg-transparent">
+            Est reprehenderit Lorem minim pariatur commodo. Pariatur voluptate
+            id sint irure ex ipsum non tempor mollit laboris incididunt. Elit
+            tempor laboris sit ipsum enim tempor commodo consequat adipisicing
+            elit velit.
           </div>
         </div>
       </div>
+
+      <div className="grid sm:flex justify-items-center justify-around bg-customblue p-2">
+        <div className="prose text-center grid items-center bg-transparent text-customwhite">
+          <div className="bg-transparent">
+            Est reprehenderit Lorem minim pariatur commodo. Pariatur voluptate
+            id sint irure ex ipsum non tempor mollit laboris incididunt. Elit
+            tempor laboris sit ipsum enim tempor commodo consequat adipisicing
+            elit velit.
+          </div>
+        </div>
+        <div className=" w-60 sm:w-80 rounded-lg">
+          <Swiper
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: true,
+            }}
+            modules={[Autoplay]}
+            className="mySwiper  rounded-lg"
+          >
+            <SwiperSlide>
+              <img src={iw1} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={iw2} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={iw3} />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </div>
+
+      
     </container>
   );
 };
