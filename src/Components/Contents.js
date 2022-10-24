@@ -9,6 +9,10 @@ import iw1 from "../Assets/Content/windopics1.jpg";
 import iw2 from "../Assets/Content/windopics2.jpg";
 import iw3 from "../Assets/Content/windopics3.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Marquee from "react-easy-marquee";
+import brand from "../Assets/Content/brandlogo/puma-logo.svg"
+
+import Brand from "../Assets/Content/brandlogo";
 
 import "swiper/css";
 import "swiper/css/effect-flip";
@@ -39,11 +43,16 @@ const Contents = () => {
       </div>
 
       {/* BODY */}
-      <div className="flex mx-auto justify-center prose border-b-8 min-w-full border-t-8 mb-2 border-customred">
-        <motion.h1 className=" text-center text-5xl transition ">
-          SOMETHING SOMETHING SALES?????
-        </motion.h1>
-      </div>
+      <Marquee
+      duration={10000}
+        className="flex min-w-full h-20 mx-auto justify-center prose border-b-8 border-t-8 mb-2 border-customred"
+      >
+        {Brand && Brand.map((item)=>
+        <div key={item.id}>
+          <img src={item.image}/>
+        </div>)}
+        <img className="w-20" src={brand}/>
+      </Marquee>
 
       <div className="grid sm:flex justify-items-center justify-around bg-gradient-to-r from-customblack to-customblue p-2">
         <div className=" w-60 sm:w-80 rounded-lg">
