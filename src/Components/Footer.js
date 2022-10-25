@@ -4,21 +4,21 @@ import logo from "../Assets/logo_transparent.png";
 const Footer = () => {
   return (
     <div>
-      <footer className="flex justify-between footer p-10 bg-customblue text-customwhite">
-        <div className="bg-customblue">
+      <footer className="flex justify-between footer p-10 bg-customblack text-customwhite">
+        <div className="bg-customblack p-2">
           <img src={logo} className="bg-transparent h-20" />
-          <p className="bg-customblue font-merriwheater cursor-default">
+          <p className="bg-customblack text-md font-merriwheater cursor-default">
             Customize Clothing Company
-            <br />
-            Customize yourself according to what you wants
+            <p className="text-sm bg-transparent text-customred">Customize yourself according to what you wants</p>
+            
           </p>
         </div>
     
-        <div className="bg-customblue grid items-end ">
-          <span className="text-customwhite text-xl font-merriwheater bg-customblue cursor-default">
+        <div className="bg-customblack grid items-end ">
+          <span className="text-customwhite text-xl font-merriwheater text-end bg-customblack cursor-default">
             Socials
           </span>
-          <div className="grid grid-flow-col gap-4 bg-customblue">
+          <div className="sm:flex sm:gap-4 gap-2 grid justify-items-center bg-customblack">
             <div className="bg-transparent grid items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="bg-transparent grid items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-brand-youtube hover:cursor-pointer transition hover:scale-150 hover:fill-customblue hover:stroke-customred bg-transparent stroke-customwhite"
+                className="icon icon-tabler icon-tabler-brand-youtube hover:cursor-pointer transition hover:scale-150 hover:fill-customblack hover:stroke-customred bg-transparent stroke-customwhite"
                 width="44"
                 height="44"
                 viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ const Footer = () => {
             <div className="bg-transparent grid items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-brand-instagram hover:cursor-pointer transition hover:scale-150 hover:fill-customblue hover:stroke-customred bg-transparent stroke-customwhite"
+                className="icon icon-tabler icon-tabler-brand-instagram hover:cursor-pointer transition hover:scale-150 hover:fill-customblack hover:stroke-customred bg-transparent stroke-customwhite"
                 width="44"
                 height="44"
                 viewBox="0 0 24 24"

@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import logo from "../Assets/logo.png";
 import video from "../Assets/vids.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Marquee from 'react-fast-marquee'
+import Marquee from "react-fast-marquee";
 
-import Models from "../Assets/Content/index"
+import Models from "../Assets/Content/index";
 import Brand from "../Assets/Content/brandlogo";
 
 import "swiper/css";
@@ -37,28 +37,24 @@ const Contents = () => {
       </div>
 
       {/* BODY */}
-      <Marquee
-        className="flex min-w-full h-40 mx-auto justify-center prose border-b-8 border-t-8 mb-2 bg-white border-customred"
-      >
-        
-        <img className="w-36 bg-white p-2" src={Brand.logoAdidas4}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoAdidas}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoHugoBoss}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoChanel}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoDG}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoFila}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoJordan}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoNike}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoLacoste}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoKFC}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoPrada}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoPuma}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoUA}/>
-        <img className="w-36 bg-white p-2" src={Brand.logoVersace}/>
-        
+      <Marquee delay={1} className="flex min-w-full h-40 justify-center prose border-b-8 border-t-8 mb-2 bg-white border-customred">
+        <img className="w-36 bg-white p-2" src={Brand.logoAdidas4} />
+        <img className="w-36 bg-white p-2" src={Brand.logoAdidas} />
+        <img className="w-36 bg-white p-2" src={Brand.logoHugoBoss} />
+        <img className="w-36 bg-white p-2" src={Brand.logoChanel} />
+        <img className="w-36 bg-white p-2" src={Brand.logoDG} />
+        <img className="w-36 bg-white p-2" src={Brand.logoFila} />
+        <img className="w-36 bg-white p-2" src={Brand.logoJordan} />
+        <img className="w-36 bg-white p-2" src={Brand.logoNike} />
+        <img className="w-36 bg-white p-2" src={Brand.logoLacoste} />
+        <img className="w-36 bg-white p-2" src={Brand.logoKFC} />
+        <img className="w-36 bg-white p-2" src={Brand.logoPrada} />
+        <img className="w-36 bg-white p-2" src={Brand.logoPuma} />
+        <img className="w-36 bg-white p-2" src={Brand.logoUA} />
+        <img className="w-36 bg-white p-2" src={Brand.logoVersace} />
       </Marquee>
 
-      <div className="grid sm:flex justify-items-center justify-around bg-gradient-to-r from-customblack to-customblue p-2">
+      <div className="grid sm:flex justify-items-center justify-around p-2 ">
         <div className=" w-60 sm:w-80 rounded-lg">
           <Swiper
             loop={true}
@@ -80,7 +76,10 @@ const Contents = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="prose text-center grid items-center bg-transparent text-customwhite m-2">
+        <div className="prose text-center grid justify-items-center bg-transparent text-customred m-2">
+          <h1 className="text-4xl text-customblue grid items-end">
+            Sporty|Casual
+          </h1>
           <div className="bg-transparent box-decoration-slice ">
             Est reprehenderit Lorem minim pariatur commodo. Pariatur voluptate
             id sint irure ex ipsum non tempor mollit laboris incididunt. Elit
@@ -95,8 +94,11 @@ const Contents = () => {
         </div>
       </div>
 
-      <div className="grid sm:flex justify-items-center justify-around bg-customblue p-2">
-        <div className="prose text-center grid items-center bg-transparent text-customwhite">
+      <div className="grid sm:flex justify-items-center justify-around  p-2">
+        <div className="prose text-center grid justify-items-center bg-transparent text-customblue">
+          <h1 className="text-4xl text-customred grid items-end">
+            Street|Outrider
+          </h1>
           <div className="bg-transparent">
             Est reprehenderit Lorem minim pariatur commodo. Pariatur voluptate
             id sint irure ex ipsum non tempor mollit laboris incididunt. Elit
