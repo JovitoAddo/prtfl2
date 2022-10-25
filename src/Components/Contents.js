@@ -2,16 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import logo from "../Assets/logo.png";
 import video from "../Assets/vids.mp4";
-import bp1 from "../Assets/Content/blackpics1.jpg";
-import bp2 from "../Assets/Content/blackpics2.jpg";
-import bp3 from "../Assets/Content/blackpics3.jpg";
-import iw1 from "../Assets/Content/windopics1.jpg";
-import iw2 from "../Assets/Content/windopics2.jpg";
-import iw3 from "../Assets/Content/windopics3.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Marquee from "react-easy-marquee";
-import brand from "../Assets/Content/brandlogo/puma-logo.svg"
+import Marquee from 'react-fast-marquee'
 
+import Models from "../Assets/Content/index"
 import Brand from "../Assets/Content/brandlogo";
 
 import "swiper/css";
@@ -44,14 +38,24 @@ const Contents = () => {
 
       {/* BODY */}
       <Marquee
-      duration={10000}
-        className="flex min-w-full h-20 mx-auto justify-center prose border-b-8 border-t-8 mb-2 border-customred"
+        className="flex min-w-full h-40 mx-auto justify-center prose border-b-8 border-t-8 mb-2 bg-white border-customred"
       >
-        {Brand && Brand.map((item)=>
-        <div key={item.id}>
-          <img src={item.image}/>
-        </div>)}
-        <img className="w-20" src={brand}/>
+        
+        <img className="w-36 bg-white p-2" src={Brand.logoAdidas4}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoAdidas}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoHugoBoss}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoChanel}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoDG}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoFila}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoJordan}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoNike}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoLacoste}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoKFC}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoPrada}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoPuma}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoUA}/>
+        <img className="w-36 bg-white p-2" src={Brand.logoVersace}/>
+        
       </Marquee>
 
       <div className="grid sm:flex justify-items-center justify-around bg-gradient-to-r from-customblack to-customblue p-2">
@@ -66,13 +70,13 @@ const Contents = () => {
             className="mySwiper rounded-lg bg-transparent"
           >
             <SwiperSlide>
-              <img src={bp1} />
+              <img src={Models.bp1} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={bp2} />
+              <img src={Models.bp2} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={bp3} />
+              <img src={Models.bp3} />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -111,13 +115,13 @@ const Contents = () => {
             className="mySwiper  rounded-lg"
           >
             <SwiperSlide>
-              <img src={iw1} />
+              <img src={Models.iw1} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={iw2} />
+              <img src={Models.iw2} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={iw3} />
+              <img src={Models.iw3} />
             </SwiperSlide>
           </Swiper>
         </div>
