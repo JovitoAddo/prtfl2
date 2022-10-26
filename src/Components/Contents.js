@@ -24,9 +24,9 @@ const Contents = () => {
           muted
           loop
         />
-        <div className="absolute top-56  object-cover bg-transparent grid justify-items-center">
+        <div className="absolute top-44  object-cover bg-transparent grid justify-items-center">
           <img src={logo} className=" h-80 w-80 " alt="" />
-          <h1 className="prose text-center font-staat text-customwhite pt-2 text-4xl bg-transparent mb-2">
+          <h1 className="prose text-center font-staat text-customwhite pt-2 text-4xl bg-transparent">
             Customize yourself according to what you wants
           </h1>
         </div>
