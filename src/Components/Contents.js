@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import logo from "../Assets/logo.png";
-import video from "../Assets/vids.mp4";
+import video from "../Assets/vids.webm";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Marquee from "react-fast-marquee";
 // Pictures Import
