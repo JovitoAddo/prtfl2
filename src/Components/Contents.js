@@ -88,7 +88,7 @@ const Contents = () => {
               Sporty|Casual
             </motion.h1>
             <motion.div
-              initial={{ y: -50, opacity: 0 }}
+              initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 1, delay: 1.5 }}
@@ -123,7 +123,7 @@ const Contents = () => {
               Street|Outrider
             </motion.h1>
             <motion.div
-              initial={{ y: -50, opacity: 0 }}
+              initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 1, delay: 1.5 }}
@@ -167,7 +167,30 @@ const Contents = () => {
 
       {/* Placeholder */}
       <div className="min-w-full min-h-screen bg-customblue text-customwhite prose text-center">
-        Placeholder
+        <h1 className="bg-customblue">Catalogue</h1>
+        <div className="bg-transparent sm:grid sm:grid-rows-3 sm:grid-cols-2 grid justify-items-center gap-4">
+          <div className="bg-customblue border-2 border-customred m-4">
+            <img src={Models.bp1} className="h-96" alt="" />
+            <div className="bg-customblack h-12">items1</div>
+          </div>
+          <div className="bg-customblue border-2 border-customred m-4">
+            <img src={Models.bp2} className="h-96" alt="" />
+            <div>items2</div>
+          </div>
+          <div className="bg-customblue border-2 border-customred m-4">
+            <img src={Models.bp3} className="h-96" alt="" />
+            <div>items3</div>
+          </div>
+          <div className="bg-customblue border-2 border-customred m-4">
+            <img src={Models.bp1} className="h-96" alt="" />
+          </div>
+          <div className="bg-customblue border-2 border-customred m-4">
+            <img src={Models.bp2} className="h-96" alt="" />
+          </div>
+          <div className="bg-customblue border-2 border-customred m-4">
+            <img src={Models.bp3} className="h-96" alt="" />
+          </div>
+        </div>
       </div>
     </container>
   );
