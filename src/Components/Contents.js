@@ -168,10 +168,12 @@ const Contents = () => {
       {/* Placeholder */}
       <div className="min-w-full min-h-screen bg-customblue text-customwhite prose text-center">
         <h1 className="bg-customblue">Catalogue</h1>
-        <div className="bg-transparent sm:grid sm:grid-rows-3 sm:grid-cols-2 grid justify-items-center gap-4">
-          <div className="bg-customblue border-2 border-customred m-4">
+        <div className=" bg-transparent sm:grid sm:grid-rows-3 sm:grid-cols-2 grid justify-items-center gap-4">
+          <div className="relative bg-customblue border-2 border-customred m-4">
             <img src={Models.bp1} className="h-96" alt="" />
-            <div className="bg-customblack h-12">items1</div>
+            <div className="bg-transparent text-customred absolute bottom-0 left-5 h-12">
+              items 1
+            </div>
           </div>
           <div className="bg-customblue border-2 border-customred m-4">
             <img src={Models.bp2} className="h-96" alt="" />
