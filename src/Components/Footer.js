@@ -4,7 +4,7 @@ import logo from "../Assets/logo_transparent.png";
 const Footer = () => {
   return (
     <div>
-      <footer className="flex justify-between footer p-10 bg-customblack text-customwhite">
+      <footer className="flex justify-between footer border-t-2 border-customblue p-10 bg-customblack text-customwhite">
         <div className="bg-customblack p-2">
           <img src={logo} className="bg-transparent h-20" />
           <p className="bg-customblack text-md font-merriwheater cursor-default">

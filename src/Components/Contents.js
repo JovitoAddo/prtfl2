@@ -16,14 +16,15 @@ const Contents = () => {
     <container as="div" className="min-h-screen ">
       {/* HEADER */}
 
-      <div className="min-h-screen flex justify-center pb-2">
-        <video
+      <div className="bg-customblack min-h-screen flex justify-center pb-2">
+        <div className="bg-customblack min-w-full opacity-40"><video
           className="min-w-full object-cover min-h-screen"
           src={video}
           autoPlay
           muted
           loop
-        />
+        /></div>
+        
         <div className="absolute top-44  object-cover bg-transparent grid justify-items-center">
           <img src={logo} className=" h-80 w-80 " alt="" />
           <h1 className="prose text-center font-staat text-customwhite pt-2 text-4xl bg-transparent">
@@ -165,8 +166,8 @@ const Contents = () => {
         </div>
       </div>
 
-      {/* Placeholder */}
-      <div className="min-w-full min-h-screen bg-customblack text-customwhite prose text-center">
+      {/* Catalogue */}
+      <div className="min-w-full min-h-screen bg-customblack text-customwhite prose text-center pb-14">
         <h1 className="bg-customblack text-customwhite cursor-default">
           Catalogue
         </h1>
@@ -175,7 +176,7 @@ const Contents = () => {
             initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1}}
+            transition={{ duration: 1 }}
             className="relative bg-transparent max-h-96 "
           >
             <img
@@ -267,6 +268,38 @@ const Contents = () => {
               items 6
             </div>
           </motion.div>
+        </div>
+      </div>
+
+      {/* Placeholder */}
+      <div className="min-h-screen bg-customblack">
+        <div className="min-h-screen bg-customred opacity-30 prose text-center min-w-full text-customwhite">
+          <div className="bg-transparent text-7xl font-staat p-8">Who we are?</div>
+          <div className="bg-transparent ">
+            Veniam eiusmod excepteur aliqua nisi commodo aute ex deserunt
+            cupidatat laboris eiusmod adipisicing laborum. Labore sit aliquip
+            non proident. Laborum et ex excepteur aute nulla laboris elit
+            voluptate in. Ullamco deserunt pariatur laborum eiusmod amet eiusmod
+            non ex sunt sint ea. Fugiat nulla aliquip proident minim ipsum minim
+            aliqua irure velit excepteur anim. Enim nisi ipsum sunt ullamco.
+            Ipsum ex duis minim qui anim incididunt qui ullamco anim occaecat
+            ut. Labore eiusmod velit laborum excepteur enim amet duis sint culpa
+            ipsum nisi. Consectetur sunt pariatur eiusmod dolore nisi deserunt
+            tempor qui et laborum sunt esse. Magna ut excepteur Lorem non ipsum.
+            Cillum ullamco dolore incididunt non minim tempor esse. Excepteur
+            ipsum incididunt nostrud aliqua minim fugiat mollit tempor minim
+            duis id sunt. Irure ipsum id fugiat ipsum reprehenderit ullamco
+            ullamco duis esse. Sunt in non nisi ipsum pariatur. Enim minim
+            cupidatat esse labore commodo do eiusmod laborum irure id. Cillum
+            excepteur duis voluptate dolor in magna. Minim non aute anim in quis
+            consectetur. Eu ut sint labore magna mollit labore laboris sunt. Eu
+            esse ea sint nostrud esse dolore sint aliquip quis incididunt.
+            Cupidatat do nisi id minim nisi mollit deserunt nisi. Fugiat veniam
+            fugiat proident adipisicing. Est esse Lorem sint ipsum ex irure
+            adipisicing cillum. Sunt Lorem elit eiusmod id aute tempor excepteur
+            sint dolore velit consequat tempor. Incididunt ex est esse fugiat
+            amet officia laboris eiusmod cillum mollit occaecat.
+          </div>
         </div>
       </div>
     </container>
