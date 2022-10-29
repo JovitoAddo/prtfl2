@@ -85,7 +85,7 @@ const Contents = () => {
               transition={{ duration: 1, delay: 0.7 }}
               className="text-4xl text-customred grid items-end "
             >
-              Sporty|Casual
+              SOMETHING | SOMETHING
             </motion.h1>
             <motion.div
               initial={{ y: 60, opacity: 0 }}
@@ -120,7 +120,7 @@ const Contents = () => {
               transition={{ duration: 1, delay: 0.7 }}
               className="text-4xl text-customred grid items-end"
             >
-              Street|Outrider
+              SOMETHING | SOMETHING
             </motion.h1>
             <motion.div
               initial={{ y: 60, opacity: 0 }}
@@ -166,32 +166,107 @@ const Contents = () => {
       </div>
 
       {/* Placeholder */}
-      <div className="min-w-full min-h-screen bg-customblue text-customwhite prose text-center">
-        <h1 className="bg-customblue">Catalogue</h1>
-        <div className=" bg-transparent sm:grid sm:grid-rows-3 sm:grid-cols-2 grid justify-items-center gap-4">
-          <div className="relative bg-customblue border-2 border-customred m-4">
-            <img src={Models.bp1} className="h-96" alt="" />
-            <div className="bg-transparent text-customred absolute bottom-0 left-5 h-12">
+      <div className="min-w-full min-h-screen bg-customblack text-customwhite prose text-center">
+        <h1 className="bg-customblack text-customwhite cursor-default">
+          Catalogue
+        </h1>
+        <div className="bg-transparent sm:grid sm:grid-rows-3 sm:grid-flow-col grid justify-evenly mx-5 gap-10">
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1}}
+            className="relative bg-transparent max-h-96 "
+          >
+            <img
+              src={Models.bp1}
+              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+              alt=""
+            />
+            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
               items 1
             </div>
-          </div>
-          <div className="bg-customblue border-2 border-customred m-4">
-            <img src={Models.bp2} className="h-96" alt="" />
-            <div>items2</div>
-          </div>
-          <div className="bg-customblue border-2 border-customred m-4">
-            <img src={Models.bp3} className="h-96" alt="" />
-            <div>items3</div>
-          </div>
-          <div className="bg-customblue border-2 border-customred m-4">
-            <img src={Models.bp1} className="h-96" alt="" />
-          </div>
-          <div className="bg-customblue border-2 border-customred m-4">
-            <img src={Models.bp2} className="h-96" alt="" />
-          </div>
-          <div className="bg-customblue border-2 border-customred m-4">
-            <img src={Models.bp3} className="h-96" alt="" />
-          </div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1 }}
+            className="relative bg-transparent max-h-96 "
+          >
+            <img
+              src={Models.bp2}
+              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+              alt=""
+            />
+            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+              items 2
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1 }}
+            className="relative bg-transparent max-h-96 "
+          >
+            <img
+              src={Models.bp3}
+              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+              alt=""
+            />
+            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+              items 3
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1 }}
+            className="relative bg-transparent max-h-96"
+          >
+            <img
+              src={Models.iw1}
+              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+              alt=""
+            />
+            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+              items 4
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1 }}
+            className="relative bg-transparent max-h-96"
+          >
+            <img
+              src={Models.iw2}
+              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+              alt=""
+            />
+            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+              items 5
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1 }}
+            className="relative bg-transparent max-h-96 "
+          >
+            <img
+              src={Models.iw3}
+              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+              alt=""
+            />
+            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+              items 6
+            </div>
+          </motion.div>
         </div>
       </div>
     </container>
