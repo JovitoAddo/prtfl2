@@ -78,7 +78,7 @@ const Contents = () => {
               </SwiperSlide>
             </Swiper>
           </div>
-          <div className="prose text-center grid justify-items-center bg-transparent text-customblue m-2 p-4">
+          <div className="prose text-justify grid justify-items-center bg-transparent text-customblue m-2 p-4">
             <motion.h1
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -92,7 +92,7 @@ const Contents = () => {
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 1, delay: 1.5 }}
+              transition={{ duration: 1, delay: 1.2 }}
               className="bg-transparent box-decoration-slice"
             >
               Est reprehenderit Lorem minim pariatur commodo. Pariatur voluptate
@@ -113,7 +113,7 @@ const Contents = () => {
       {/* slideshow2 */}
       <div className="grid sm:flex justify-items-center bg-customwhite justify-around p-2">
         <div className="border-t-2 border-customblue grid sm:flex justify-items-center justify-around p-2">
-          <div className="prose text-center grid justify-items-center bg-transparent text-customblue order-last sm:order-first p-4">
+          <div className="prose text-justify grid justify-items-center bg-transparent text-customblue order-last sm:order-first p-4">
             <motion.h1
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -127,7 +127,7 @@ const Contents = () => {
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 1, delay: 1.5 }}
+              transition={{ duration: 1, delay: 1.2 }}
               className="bg-transparent "
             >
               Est reprehenderit Lorem minim pariatur commodo. Pariatur voluptate
@@ -167,7 +167,7 @@ const Contents = () => {
       </div>
 
       {/* Catalogue */}
-      <div className="min-w-full min-h-screen bg-customblack text-customwhite prose text-center pb-14">
+      <div className="min-w-full min-h-screen border-t-4 border-customred bg-customblack text-customwhite prose text-center pb-14">
         <h1 className="bg-customblack text-customwhite cursor-default">
           Catalogue
         </h1>
@@ -271,11 +271,11 @@ const Contents = () => {
         </div>
       </div>
 
-      {/* Placeholder */}
-      <div className="min-h-screen bg-customblack">
-        <div className="min-h-screen bg-customred opacity-30 prose text-center min-w-full text-customwhite">
+      {/* Profile */}
+      <div className="min-h-screen bg-customblack border-t-4 border-customwhite">
+        <div className="min-h-screen bg-customred bg-opacity-30 prose text-center min-w-full  text-customwhite">
           <div className="bg-transparent text-7xl font-staat p-8">Who we are?</div>
-          <div className="bg-transparent ">
+          <div className="bg-transparent text-justify px-14">
             Veniam eiusmod excepteur aliqua nisi commodo aute ex deserunt
             cupidatat laboris eiusmod adipisicing laborum. Labore sit aliquip
             non proident. Laborum et ex excepteur aute nulla laboris elit
