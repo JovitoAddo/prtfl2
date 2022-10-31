@@ -274,7 +274,7 @@ const Contents = () => {
       {/* Profile */}
       <div className="min-h-screen bg-customblack border-t-4 border-customwhite">
         <div className="min-h-screen bg-customred bg-opacity-30 prose text-center min-w-full  text-customwhite">
-          <div className="bg-transparent text-7xl font-staat p-8">Who we are?</div>
+          <div className="bg-transparent text-7xl font-staat p-8">Giving Opportunity to Let You be You</div>
           <div className="bg-transparent text-justify px-14">
             Veniam eiusmod excepteur aliqua nisi commodo aute ex deserunt
             cupidatat laboris eiusmod adipisicing laborum. Labore sit aliquip
