@@ -7,23 +7,13 @@ import Catalogue from "./Components/Catalogue";
 function App() {
   return (
     <div className="App">
+      <Navbar/>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Contents />} />
-          <Route path='/Catalogue' element={<Catalogue/>}/>
-        </Route>
+          <Route path='/' element={<Contents/>}/>
+          <Route path='/catalogue' element={<Catalogue/>}/>
       </Routes>
+      <Footer/>
     </div>
-  );
-}
-
-function Home() {
-  return (
-    <>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </>
   );
 }
 export default App;

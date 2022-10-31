@@ -10,6 +10,7 @@ import Brand from "../Assets/Content/brandlogo";
 // Swiper Import
 import "swiper/css";
 import { Autoplay } from "swiper";
+import { Link } from "react-router-dom";
 
 const Contents = () => {
   return (
@@ -17,14 +18,16 @@ const Contents = () => {
       {/* HEADER */}
 
       <div className="bg-customblack min-h-screen flex justify-center pb-2">
-        <div className="bg-customblack min-w-full opacity-40"><video
-          className="min-w-full object-cover min-h-screen"
-          src={video}
-          autoPlay
-          muted
-          loop
-        /></div>
-        
+        <div className="bg-customblack min-w-full opacity-40">
+          <video
+            className="min-w-full object-cover min-h-screen"
+            src={video}
+            autoPlay
+            muted
+            loop
+          />
+        </div>
+
         <div className="absolute top-44  object-cover bg-transparent grid justify-items-center">
           <img src={logo} className=" h-80 w-80 " alt="" />
           <h1 className="prose text-center font-staat text-customwhite pt-2 text-4xl bg-transparent">
@@ -172,109 +175,123 @@ const Contents = () => {
           Catalogue
         </h1>
         <div className="bg-transparent sm:grid sm:grid-rows-3 sm:grid-flow-col grid justify-evenly mx-5 gap-10">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1 }}
-            className="relative bg-transparent max-h-96 "
-          >
-            <img
-              src={Models.bp1}
-              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
-              alt=""
-            />
-            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
-              items 1
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1 }}
-            className="relative bg-transparent max-h-96 "
-          >
-            <img
-              src={Models.bp2}
-              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
-              alt=""
-            />
-            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
-              items 2
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1 }}
-            className="relative bg-transparent max-h-96 "
-          >
-            <img
-              src={Models.bp3}
-              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
-              alt=""
-            />
-            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
-              items 3
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1 }}
-            className="relative bg-transparent max-h-96"
-          >
-            <img
-              src={Models.iw1}
-              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
-              alt=""
-            />
-            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
-              items 4
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1 }}
-            className="relative bg-transparent max-h-96"
-          >
-            <img
-              src={Models.iw2}
-              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
-              alt=""
-            />
-            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
-              items 5
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1 }}
-            className="relative bg-transparent max-h-96 "
-          >
-            <img
-              src={Models.iw3}
-              className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
-              alt=""
-            />
-            <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
-              items 6
-            </div>
-          </motion.div>
+          <Link to="/catalogue" className="bg-transparent">
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 1 }}
+              className="relative bg-transparent max-h-96 "
+            >
+              <img
+                src={Models.bp1}
+                className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+                alt=""
+              />
+              <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+                items 1
+              </div>
+            </motion.div>
+          </Link>
+          <Link to="/catalogue" className="bg-transparent">
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 1 }}
+              className="relative bg-transparent max-h-96 "
+            >
+              <img
+                src={Models.bp2}
+                className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+                alt=""
+              />
+              <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+                items 2
+              </div>
+            </motion.div>
+          </Link>
+          <Link to="/catalogue" className="bg-transparent">
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 1 }}
+              className="relative bg-transparent max-h-96 "
+            >
+              <img
+                src={Models.bp3}
+                className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+                alt=""
+              />
+              <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+                items 3
+              </div>
+            </motion.div>
+          </Link>
+          <Link to="/catalogue" className="bg-transparent">
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 1 }}
+              className="relative bg-transparent max-h-96"
+            >
+              <img
+                src={Models.iw1}
+                className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+                alt=""
+              />
+              <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+                items 4
+              </div>
+            </motion.div>
+          </Link>
+          <Link to="/catalogue" className="bg-transparent">
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 1 }}
+              className="relative bg-transparent max-h-96"
+            >
+              <img
+                src={Models.iw2}
+                className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+                alt=""
+              />
+              <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+                items 5
+              </div>
+            </motion.div>
+          </Link>
+          <Link to="/catalogue" className="bg-transparent">
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 1 }}
+              className="relative bg-transparent max-h-96 "
+            >
+              <img
+                src={Models.iw3}
+                className="max-h-96 rounded-md opacity-70 hover:opacity-100 border-4 hover:border-customwhite border-customred"
+                alt=""
+              />
+              <div className=" bg-transparent absolute top-10 w-full text-customwhite font-staat cursor-default text-3xl h-12">
+                items 6
+              </div>
+            </motion.div>
+          </Link>
         </div>
       </div>
 
       {/* Profile */}
       <div className="min-h-screen bg-customblack border-t-4 border-customwhite">
         <div className="min-h-screen bg-customred bg-opacity-30 prose text-center min-w-full  text-customwhite">
-          <div className="bg-transparent text-7xl font-staat p-8">Giving Opportunity to Let You be You</div>
+          <div className="bg-transparent text-7xl font-staat p-8">
+            Giving Opportunity to Let You be You
+          </div>
           <div className="bg-transparent text-justify px-14">
             Veniam eiusmod excepteur aliqua nisi commodo aute ex deserunt
             cupidatat laboris eiusmod adipisicing laborum. Labore sit aliquip
