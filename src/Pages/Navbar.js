@@ -22,7 +22,7 @@ const Navbar = () => {
     >
       <div className="flex flex-row justify-around bg-transparent backdrop-blur-md divide-x-2 divide-customblue pl-2 pr-2">
         <Link to="/" className="bg-transparent">
-          <img src={logo} className="h-20 w-20 bg-transparent" />
+          <img src={logo} className="h-auto w-20 bg-transparent" />
         </Link>
         <div className="basis-10/12 bg-transparent"></div>
         <div className="flex gap-1 pl-2 bg-transparent">

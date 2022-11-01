@@ -5,6 +5,7 @@ const Models = {
     iw1: require('./windopics1.jpg'),
     iw2: require('./windopics2.jpg'),
     iw3: require('./windopics3.jpg'),
+    np1: require('./newpics.jpg'),
 }
 
 export default Models
