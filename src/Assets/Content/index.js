@@ -6,6 +6,10 @@ const Models = {
     iw2: require('./windopics2.jpg'),
     iw3: require('./windopics3.jpg'),
     np1: require('./newpics.jpg'),
+    cat1: require('./cat1.jpg'),
+    cat2: require('./cat2.jpg'),
+    cat3: require('./cat3.jpg'),
+    shirts: require('./shirts.jpg'),
 }
 
 export default Models

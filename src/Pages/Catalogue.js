@@ -9,38 +9,17 @@ import "swiper/css";
 
 const Catalogue = () => {
   return (
-    <div className="min-h-screen">
-      <div className="min-w-full pt-40">
-        <Swiper
-          loop={true}
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: true,
-          }}
-          modules={[Autoplay]}
-          className="mySwiper rounded-lg bg-transparent h-96"
-        >
-          <SwiperSlide className="static">
-            <img src={Models.np1} alt="" className="w-fit bg-transparent" />
-            <h1 className="absolute top-0 right-0 text-6xl font-poiret text-customred bg-transparent">
-              NEW STUFF
-            </h1>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Models.iw1} alt="" className="w-full bg-transparent" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Models.iw2} alt="" className="w-full bg-transparent" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Models.iw3} alt="" className="w-full bg-transparent" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Models.bp2} alt="" className="w-full bg-transparent" />
-          </SwiperSlide>
-        </Swiper>
+    <>
+      <div className="flex justify-center pt-20">
+        <div className="grid items-center w-1/3 h-36 border-2 border-customblack rounded-md bg-gradient-to-r from-customblue to-customred">
+          <h1 className="bg-transparent text-customwhite text-5xl font-staat text-center">New Arrival Today</h1>
+        </div>
       </div>
-    </div>
+
+      <div className="min-h-screen grid justify-center items-center">
+        something
+      </div>
+    </>
   );
 };
 

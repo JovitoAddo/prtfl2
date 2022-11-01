@@ -89,7 +89,7 @@ const Contents = () => {
               transition={{ duration: 1, delay: 0.7 }}
               className="text-4xl text-customred grid items-end "
             >
-              SOMETHING | SOMETHING
+              Sporty | Casual
             </motion.h1>
             <motion.div
               initial={{ y: 60, opacity: 0 }}
@@ -124,7 +124,7 @@ const Contents = () => {
               transition={{ duration: 1, delay: 0.7 }}
               className="text-4xl text-customred grid items-end"
             >
-              SOMETHING | SOMETHING
+              Outrider | Comfort
             </motion.h1>
             <motion.div
               initial={{ y: 60, opacity: 0 }}
