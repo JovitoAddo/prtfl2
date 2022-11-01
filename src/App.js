@@ -1,8 +1,9 @@
-import Contents from "./Components/Contents";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
+import Contents from "./Pages/Contents";
+import Footer from "./Pages/Footer";
+import Navbar from "./Pages/Navbar";
 import { Routes, Route, Outlet } from "react-router-dom";
-import Catalogue from "./Components/Catalogue";
+import Catalogue from "./Pages/Catalogue";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
           <Route path='/' element={<Contents/>}/>
           <Route path='/catalogue' element={<Catalogue/>}/>
+          <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer/>
     </div>

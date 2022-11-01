@@ -39,22 +39,22 @@ const Contents = () => {
       {/* BODY */}
       <Marquee
         delay={1}
-        className="flex min-w-full h-40 justify-center prose border-b-8 border-t-8 mb-2 bg-white border-customred"
+        className="flex min-w-full h-40 justify-center prose border-b-8 border-t-8 mb-2 bg-customwhite border-customred"
       >
-        <img className="w-36 bg-white p-2" src={Brand.logoAdidas4} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoAdidas} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoHugoBoss} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoChanel} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoDG} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoKFC} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoJordan} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoNike} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoLacoste} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoVersace} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoPrada} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoPuma} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoUA} alt="" />
-        <img className="w-36 bg-white p-2" src={Brand.logoFila} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoAdidas4} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoAdidas} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoHugoBoss} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoChanel} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoDG} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoKFC} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoJordan} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoNike} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoLacoste} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoVersace} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoPrada} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoPuma} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoUA} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoFila} alt="" />
       </Marquee>
 
       {/* slideshow 1 */}
