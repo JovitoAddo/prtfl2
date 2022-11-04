@@ -18,25 +18,22 @@ const Catalogue = () => {
         </div>
       </div>
 
-      <div className="min-h-screen flex">
-        <div className="grid p-2">
-          <div className="h-96 prose text-center mx-auto grid items-center">
-            Labore deserunt magna velit consectetur tempor in cupidatat
-            excepteur. Minim eu aliqua cupidatat nostrud cupidatat sit. Nisi
-            labore qui nostrud veniam Lorem ullamco magna pariatur officia.
-            Culpa elit reprehenderit minim commodo tempor magna id ipsum
-            excepteur irure duis irure adipisicing. Incididunt aute cupidatat
-            sint laboris sint dolor est nisi fugiat occaecat enim elit laborum.
-            Sunt eu excepteur cillum fugiat sint. Nisi incididunt esse proident
-            voluptate irure Lorem adipisicing ipsum Lorem consequat esse do
-            tempor.
+      <div className="min-h-screen grid justify-center ">
+        <div className="grid sm:flex p-2 gap-4">
+          <div>
+            <img src={Models.cat2} alt="" className="h-96" />
           </div>
           <div>
-            <img src={Models.cat2} alt=''/>
+            <img src={Models.cat2} alt="" className="h-96" />
           </div>
         </div>
-        <div>
-          <img src={Models.np1} alt="" className="h-96" />
+        <div  className="grid sm:flex p-2 gap-4">
+          <div>
+            <img src={Models.cat1} alt="" className="h-96" />
+          </div>
+          <div>
+            <img src={Models.cat3} alt="" className="h-96" />
+          </div>
         </div>
       </div>
     </>
