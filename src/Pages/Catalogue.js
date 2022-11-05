@@ -51,9 +51,7 @@ const Catalogue = () => {
               <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
                 wishlist
               </button>
-              <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
-                something
-              </button>
+              
             </button>
           </div>
           <div>
@@ -93,9 +91,7 @@ const Catalogue = () => {
               <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
                 wishlist
               </button>
-              <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
-                something
-              </button>
+              
             </button>
           </div>
           <div>
@@ -135,9 +131,7 @@ const Catalogue = () => {
               <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
                 wishlist
               </button>
-              <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
-                something
-              </button>
+              
             </button>
           </div>
           <div>
