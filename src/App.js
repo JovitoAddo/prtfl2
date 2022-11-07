@@ -4,6 +4,7 @@ import Navbar from "./Pages/Navbar";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Catalogue from "./Pages/Catalogue";
 import NotFound from "./Pages/NotFound";
+import ItemPage from "./Pages/ItemPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
           <Route path='/' element={<Contents/>}/>
           <Route path='/catalogue' element={<Catalogue/>}/>
+          <Route path='/items' element={<ItemPage/>}/>
           <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer/>

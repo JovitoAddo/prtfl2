@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 
@@ -67,9 +68,11 @@ const Catalogue = () => {
               </a>
             </rating>
             <button as div className="flex gap-3 items-end pb-2 bg-transparent">
-              <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
-                preview
-              </button>
+              <Link to="/items" className="bg-transparent">
+                <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
+                  preview
+                </button>
+              </Link>
               <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
                 wishlist
               </button>
@@ -130,9 +133,11 @@ const Catalogue = () => {
             </rating>
 
             <button as div className="flex gap-3 items-end pb-2 bg-transparent">
-              <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
-                preview
-              </button>
+              <Link to="/items" className="bg-transparent">
+                <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
+                  preview
+                </button>
+              </Link>
               <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
                 wishlist
               </button>
@@ -191,9 +196,11 @@ const Catalogue = () => {
               </a>
             </rating>
             <button as div className="flex gap-3 items-end pb-2 bg-transparent">
-              <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
-                preview
-              </button>
+              <Link to="/items" className="bg-transparent">
+                <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
+                  preview
+                </button>
+              </Link>
               <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
                 wishlist
               </button>
