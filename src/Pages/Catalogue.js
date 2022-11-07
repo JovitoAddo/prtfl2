@@ -69,7 +69,7 @@ const Catalogue = () => {
             </rating>
             <button as div className="flex gap-3 items-end pb-2 bg-transparent">
               <Link to="/items" className="bg-transparent">
-                <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
+                <button className="border-2 border-customblue rounded-md px-6 bg-transparent hover:scale-125">
                   preview
                 </button>
               </Link>
@@ -134,7 +134,7 @@ const Catalogue = () => {
 
             <button as div className="flex gap-3 items-end pb-2 bg-transparent">
               <Link to="/items" className="bg-transparent">
-                <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
+                <button className="border-2 border-customblue rounded-md px-6 bg-transparent hover:scale-125">
                   preview
                 </button>
               </Link>
@@ -197,7 +197,7 @@ const Catalogue = () => {
             </rating>
             <button as div className="flex gap-3 items-end pb-2 bg-transparent">
               <Link to="/items" className="bg-transparent">
-                <button className="border-2 border-customblue rounded-md px-6 bg-transparent">
+                <button className="border-2 border-customblue rounded-md px-6 bg-transparent hover:scale-125">
                   preview
                 </button>
               </Link>
