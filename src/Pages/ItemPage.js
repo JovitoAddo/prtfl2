@@ -14,8 +14,8 @@ const ItemPage = () => {
         </h1>
       </header>
 
-      <body as div className="grid pt-5">
-        <div className="flex justify-around gap-3 p-4">
+      <body as div className="grid pt-5 border-2 border-customblue p-4 m-4">
+        <div className="grid sm:flex justify-around gap-3 p-4 border-b-2 border-customred">
           <img
             src={Models.np1}
             alt=""
@@ -57,8 +57,8 @@ const ItemPage = () => {
           </div>
         </div>
 
-        <div className="">
-          <comments as div className="">
+        <comments as div className="">
+          <div className="">
             Id occaecat deserunt consequat velit. Consectetur ad minim quis in
             ullamco. Exercitation quis irure enim eiusmod mollit dolore
             cupidatat fugiat non officia ut et eu.Ipsum qui enim culpa culpa non
@@ -73,8 +73,8 @@ const ItemPage = () => {
             Esse occaecat et sunt labore voluptate eu incididunt nisi pariatur
             reprehenderit id. Commodo esse laborum ut est duis consectetur
             fugiat minim ullamco et.
-          </comments>
-        </div>
+          </div>
+        </comments>
       </body>
     </div>
   );
