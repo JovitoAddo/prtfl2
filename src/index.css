@@ -44,3 +44,16 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background: #F5F5F5; 
 }
+
+#button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: #000;
+}
+.off {
+  color: #ccc;
+}
