@@ -29,8 +29,8 @@ const Catalogue = () => {
     <>
       <div className="flex justify-center">
         <div className="grid items-end w-full h-36 border-2 border-customblack bg-gradient-to-r from-customblue to-customred">
-          <h1 className="bg-transparent text-customwhite text-5xl font-staat text-center">
-            New Arrival
+          <h1 className="bg-transparent text-customwhite text-5xl font-staat text-center cursor-default">
+          Men's Clothing
           </h1>
         </div>
       </div>
@@ -44,7 +44,7 @@ const Catalogue = () => {
           className="grid sm:flex justify-center gap-4 h-fit w-fit bg-customwhite shadow-lg shadow-customblue rounded-lg p-1 sm:p-2"
         >
           <div className="grid justify-items-center items-center prose bg-transparent">
-            <h1 className="text-center font-poiret bg-transparent">{produk.title}</h1>
+            <h1 className="text-center font-poiret bg-transparent cursor-default">{produk.title}</h1>
             <h1 className="text-sm text-justify font-thin bg-transparent">
               {produk.description}
             </h1>
