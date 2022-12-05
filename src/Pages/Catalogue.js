@@ -35,8 +35,8 @@ const Catalogue = () => {
         </div>
       </div>
 
-      <div className="min-h-screen grid justify-items-center p-5 gap-8">
-        {product.map((produk, index)=>(
+      <div className="min-h-screen grid justify-items-center p-2 gap-8">
+        {product.filter((produk)=>produk.category == "men's clothing").map((produk, index)=>(
           <div>
             <catalog
           as
@@ -86,8 +86,8 @@ const Catalogue = () => {
               </button>
             </button>
           </div>
-          <div>
-            <img src={produk.image} alt="" className="w-96" />
+          <div className='flex justify-center'>
+            <img src={produk.image} alt="" className="w-80 border-2 border-customblack border-opacity-10" />
           </div>
         </catalog>
           </div>
