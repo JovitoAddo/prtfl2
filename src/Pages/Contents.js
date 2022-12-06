@@ -41,8 +41,11 @@ const Contents = () => {
         delay={1}
         className="flex min-w-full h-40 justify-center prose border-b-8 border-t-8 mb-2 bg-customwhite border-customred"
       >
-        <img className="w-36 bg-customwhite p-2" src={Brand.logoAdidas4} alt="" />
-        <img className="w-36 bg-customwhite p-2" src={Brand.logoAdidas} alt="" />
+        {/* {Brand.map=((logo, index)=(
+          <img key={index} className="w-36 bg-customwhite p-2" src={logo.id} alt="" />
+        ))} */}
+         <img className="w-36 bg-customwhite p-2" src={Brand.logoAdidas4} alt="" /> 
+         <img className="w-36 bg-customwhite p-2" src={Brand.logoAdidas} alt="" />
         <img className="w-36 bg-customwhite p-2" src={Brand.logoHugoBoss} alt="" />
         <img className="w-36 bg-customwhite p-2" src={Brand.logoChanel} alt="" />
         <img className="w-36 bg-customwhite p-2" src={Brand.logoDG} alt="" />
@@ -54,7 +57,7 @@ const Contents = () => {
         <img className="w-36 bg-customwhite p-2" src={Brand.logoPrada} alt="" />
         <img className="w-36 bg-customwhite p-2" src={Brand.logoPuma} alt="" />
         <img className="w-36 bg-customwhite p-2" src={Brand.logoUA} alt="" />
-        <img className="w-36 bg-customwhite p-2" src={Brand.logoFila} alt="" />
+        <img className="w-36 bg-customwhite p-2" src={Brand.logoFila} alt="" /> 
       </Marquee>
 
       {/* slideshow 1 */}
@@ -124,7 +127,7 @@ const Contents = () => {
               transition={{ duration: 1, delay: 0.7 }}
               className="text-4xl text-customred grid items-end"
             >
-              Outrider | Comfort
+              Street | Comfort
             </motion.h1>
             <motion.div
               initial={{ y: 60, opacity: 0 }}

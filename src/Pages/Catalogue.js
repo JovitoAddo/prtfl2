@@ -37,7 +37,7 @@ const Catalogue = () => {
 
       <div className="min-h-screen grid justify-items-center p-2 gap-8">
         {product.filter((produk)=>produk.category == "men's clothing").map((produk, index)=>(
-          <div>
+          <div key={index}>
             <catalog
           as
           div
