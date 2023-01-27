@@ -6,7 +6,7 @@ import Catalogue from "./Pages/Catalogue";
 import NotFound from "./Pages/NotFound";
 import ItemPage from "./Pages/ItemPage";
 import Login from "./Pages/Login";
-import MenWear from "./Pages/MenWear";
+// import MenWear from "./Pages/MenWear";
 
 function App() {
   return (
