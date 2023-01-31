@@ -1,6 +1,6 @@
 import React from "react";
 import * as yup from "yup";
-import {yupResolver} from '@hookform/resolvers/yup'
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -9,7 +9,7 @@ const Login = () => {
 
   const schema = yup.object().shape({
     name: yup.string().required(),
-    email: yup.string().required(),
+    email: yup.string().email("Please Enter a Valid Email").required("Please Enter Your Email"),
     password: yup.string().min(4).max(20).required(),
     confirmPassword: yup
       .string()
@@ -17,12 +17,15 @@ const Login = () => {
       .required(),
   });
 
-  const { register, handleSubmit } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: yupResolver(schema),
-
   });
-  const onSubmit = () => {
-    console.log("hello World");
+  const onSubmit = (data) => {
+    console.log(data);
   };
   return (
     <div className="w-full">
@@ -64,17 +67,18 @@ const Login = () => {
                 placeholder="Enter your Email"
                 type="email"
                 {...register("email")}
-                // className={
-                //   errors.email && touched.email
-                //     ? "bg-red-400 shadow-sm-light rounded-sm shadow-customred border-0 w-80"
-                //     : "border-0 rounded-sm  w-80"
-                // }
+                className={
+                  errors.email
+                    ? "bg-red-400 shadow-sm-light rounded-sm shadow-customred border-0 w-80"
+                    : "border-0 rounded-sm w-80"
+                }
               />
-              {/* {errors.email && touched.email && (
+              {errors.email && (
                 <p className="bg-transparent text-customred p-1 text-lg">
-                  {errors.email}
+                  {errors.email.message}
                 </p>
-              )} */}
+              )}
+
             </div>
             <div className="grid justify-items-center bg-transparent p-3">
               <label
