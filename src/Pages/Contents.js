@@ -98,7 +98,7 @@ const Contents = () => {
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 1, delay: 1.2 }}
+              transition={{ duration: 1, delay: 0.3}}
               className="bg-transparent box-decoration-slice"
             >
               Est reprehenderit Lorem minim pariatur commodo. Pariatur voluptate
@@ -133,7 +133,7 @@ const Contents = () => {
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 1, delay: 1.2 }}
+              transition={{ duration: 1, delay: 0.3 }}
               className="bg-transparent "
             >
               Est reprehenderit Lorem minim pariatur commodo. Pariatur voluptate
