@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-const Login = () => {
+const Register = () => {
   const [view, setView] = useState(false);
 
   const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
@@ -27,7 +27,7 @@ const Login = () => {
       .oneOf([yup.ref("password"), null], "Password Did Not Matched")
       .required("Please Re-enter Your Password"),
     loginEmail: yup.string().email("Please Enter a Valid Email"),
-    loginPassword: yup.string()
+    loginPassword: yup.string(),
   });
 
   const {
@@ -37,15 +37,25 @@ const Login = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onSubmitRegister = (data) => {
-    console.log(data);
+
+  const onSubmitRegister = (formValue) => {
+    console.log(formValue);
+    localStorage.setItem("userData", JSON.stringify(formValue));
     alert("Register Completed");
     setView(!view);
   };
 
   const onSubmitLogin = () => {
-    alert("login successful");
+    // const data = JSON.parse(localStorage.getItem("user"));
+
+    console.log("submit button clicked")
+
+    // data ? alert("login success") :  alert("login failed");
+
+    
+    
   };
+
   return (
     <div className="w-full">
       <div className="flex justify-center">
@@ -61,7 +71,7 @@ const Login = () => {
           onClick={() => {
             setView(!view);
           }}
-          className="border-2 m-2 p-3 bg-customred prose text-xl text-customblack border-customblack shadow-md transition active:translate-y-2"
+          className="border-2 m-2 p-3 bg-customred bg-opacity-70 prose text-xl text-customblack border-customblack shadow-md transition active:translate-y-2"
         >
           {view === false ? "Go to Login" : "Go to Register"}
         </button>
@@ -83,7 +93,7 @@ const Login = () => {
                 Email
               </label>
               <input
-                placeholder="Enter your Email"
+                placeholder="Enter Your Email"
                 type="email"
                 {...register("email")}
                 className={
@@ -106,7 +116,7 @@ const Login = () => {
                 Name
               </label>
               <input
-                placeholder="Enter your Name"
+                placeholder="Enter Your Name"
                 type="text"
                 {...register("name")}
                 className={
@@ -134,8 +144,8 @@ const Login = () => {
                 and minimum 5 characters.
               </p>
               <input
-                placeholder="Enter your Password"
-                type="text"
+                placeholder="Enter Your Password"
+                type="password"
                 {...register("password")}
                 className={
                   errors.password
@@ -157,8 +167,8 @@ const Login = () => {
                 Confirm Password
               </label>
               <input
-                placeholder="Confirm your Password"
-                type="text"
+                placeholder="Confirm Your Password"
+                type="password"
                 {...register("confirmPassword")}
                 className={
                   errors.confirmPassword
@@ -174,7 +184,7 @@ const Login = () => {
             </div>
             <button
               type="submit"
-              className="bg-customblack drop-shadow-lg rounded-sm p-3 m-2 text-customwhite"
+              className="bg-customblack drop-shadow-lg border-b-2 border-customwhite rounded-sm p-3 m-2 text-customwhite"
             >
               Submit
             </button>
@@ -196,7 +206,7 @@ const Login = () => {
               Email
             </label>
             <input
-              placeholder="Enter your Email"
+              placeholder="Enter Your Email"
               type="email"
               {...register("loginEmail")}
               className={
@@ -213,43 +223,43 @@ const Login = () => {
           </div>
 
           <div className="grid justify-items-center bg-transparent p-3">
-              <label
-                htmlFor="password"
-                className="bg-transparent text-customwhite p-1 text-xl"
-              >
-                Password
-              </label>
-              {/* <p className="bg-transparent text-customwhite border-2 border-customred m-2 prose text-center w-80">
+            <label
+              htmlFor="password"
+              className="bg-transparent text-customwhite p-1 text-xl"
+            >
+              Password
+            </label>
+            {/* <p className="bg-transparent text-customwhite border-2 border-customred m-2 prose text-center w-80">
                 Password required to have an uppercase, a lowercase, a number
                 and minimum 5 characters.
               </p> */}
-              <input
-                placeholder="Enter your Password"
-                type="text"
-                {...register("loginPassword")}
-                className={
-                  errors.loginPassword
-                    ? "bg-red-400 shadow-sm-light rounded-sm shadow-customred border-0 w-80"
-                    : "border-0 rounded-sm  w-80"
-                }
-              />
-              {errors.loginPassword && (
-                <p className="bg-transparent text-customred text-lg">
-                  {errors.loginPassword.message}
-                </p>
-              )}
-            </div>
+            <input
+              placeholder="Enter Your Password"
+              type="password"
+              {...register("loginPassword")}
+              className={
+                errors.loginPassword
+                  ? "bg-red-400 shadow-sm-light rounded-sm shadow-customred border-0 w-80"
+                  : "border-0 rounded-sm  w-80"
+              }
+            />
+            {errors.loginPassword && (
+              <p className="bg-transparent text-customred text-lg">
+                {errors.loginPassword.message}
+              </p>
+            )}
+          </div>
 
-            <button
-              type="submit"
-              className="bg-customblack drop-shadow-lg rounded-sm p-3 m-2 text-customwhite"
-            >
-              Submit
-            </button>
+          <button
+            type="submit"
+            className="bg-customblack drop-shadow-lg border-b-2 border-customwhite rounded-sm p-3 m-2 text-customwhite"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Register;
