@@ -6,6 +6,7 @@ import Catalogue from "./Pages/Catalogue";
 import NotFound from "./Pages/NotFound";
 import ItemPage from "./Pages/ItemPage";
 import Register from "./Pages/Register";
+import Login from "./Pages/Login";
 // import MenWear from "./Pages/MenWear";
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
           <Route path='/catalogue' element={<Catalogue/>}/>
           <Route path='/items' element={<ItemPage/>}/>
           <Route path='*' element={<NotFound/>}/>
-          <Route path='/login' element={<Register/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/login' element={<Login/>}/>
       </Routes>
       <Footer/>
     </div>

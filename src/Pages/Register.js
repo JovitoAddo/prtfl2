@@ -3,33 +3,12 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import schema from "../Schema";
 
 const Register = () => {
   const [view, setView] = useState(false);
 
-  const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
-
-  const schema = yup.object().shape({
-    name: yup.string().required("Please Enter Your Name"),
-    email: yup
-      .string()
-      .email("Please Enter a Valid Email")
-      .required("Please Enter Your Email"),
-    password: yup
-      .string()
-      .min(5)
-      .matches(passwordRules, {
-        message: "Password Did Not Matched Requirements",
-      })
-      .required(),
-    confirmPassword: yup
-      .string()
-      .oneOf([yup.ref("password"), null], "Password Did Not Matched")
-      .required("Please Re-enter Your Password"),
-    loginEmail: yup.string().email("Please Enter a Valid Email"),
-    loginPassword: yup.string(),
-  });
-
+  
   const {
     register,
     handleSubmit,
@@ -45,16 +24,7 @@ const Register = () => {
     setView(!view);
   };
 
-  const onSubmitLogin = () => {
-    // const data = JSON.parse(localStorage.getItem("user"));
-
-    console.log("submit button clicked")
-
-    // data ? alert("login success") :  alert("login failed");
-
-    
-    
-  };
+  
 
   return (
     <div className="w-full">
@@ -194,69 +164,7 @@ const Register = () => {
 
       {/* LOGIN PAGE */}
       <div className={view === false ? "hidden" : " bg-customblue h-screen"}>
-        <form
-          onSubmit={handleSubmit(onSubmitLogin)}
-          className=" grid justify-items-center bg-transparent"
-        >
-          <div className="grid justify-items-center bg-transparent p-3">
-            <label
-              htmlFor="email"
-              className="bg-transparent text-customwhite p-1 text-xl"
-            >
-              Email
-            </label>
-            <input
-              placeholder="Enter Your Email"
-              type="email"
-              {...register("loginEmail")}
-              className={
-                errors.loginEmail
-                  ? "bg-red-400 shadow-sm-light rounded-sm shadow-customred border-0 w-80"
-                  : "border-0 rounded-sm w-80"
-              }
-            />
-            {errors.loginEmail && (
-              <p className="bg-transparent text-customred p-1 text-lg">
-                {errors.loginEmail.message}
-              </p>
-            )}
-          </div>
-
-          <div className="grid justify-items-center bg-transparent p-3">
-            <label
-              htmlFor="password"
-              className="bg-transparent text-customwhite p-1 text-xl"
-            >
-              Password
-            </label>
-            {/* <p className="bg-transparent text-customwhite border-2 border-customred m-2 prose text-center w-80">
-                Password required to have an uppercase, a lowercase, a number
-                and minimum 5 characters.
-              </p> */}
-            <input
-              placeholder="Enter Your Password"
-              type="password"
-              {...register("loginPassword")}
-              className={
-                errors.loginPassword
-                  ? "bg-red-400 shadow-sm-light rounded-sm shadow-customred border-0 w-80"
-                  : "border-0 rounded-sm  w-80"
-              }
-            />
-            {errors.loginPassword && (
-              <p className="bg-transparent text-customred text-lg">
-                {errors.loginPassword.message}
-              </p>
-            )}
-          </div>
-
-          <button
-            type="submit"
-            className="bg-customblack drop-shadow-lg border-b-2 border-customwhite rounded-sm p-3 m-2 text-customwhite"
-          >
-            Submit
-          </button>
-        </form>
+        
       </div>
     </div>
   );
