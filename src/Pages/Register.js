@@ -4,11 +4,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import schema from "../Schema";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const [view, setView] = useState(false);
-
-  
   const {
     register,
     handleSubmit,
@@ -17,42 +15,39 @@ const Register = () => {
     resolver: yupResolver(schema),
   });
 
+  const Navigate = useNavigate()
+
   const onSubmitRegister = (formValue) => {
     console.log(formValue);
-    localStorage.setItem("userData", JSON.stringify(formValue));
+    // localStorage.setItem("userData", JSON.stringify(formValue));
     alert("Register Completed");
-    setView(!view);
+    Navigate("/login")
   };
-
-  
 
   return (
     <div className="w-full">
       <div className="flex justify-center">
         <div className="grid items-end w-full h-36 border-2 border-customblack bg-customblack">
           <h1 className="bg-transparent text-customwhite text-5xl font-staat text-center cursor-default">
-            {view === false ? "Register Your Account" : "Login Here"}
+            Register Your Account
           </h1>
         </div>
       </div>
 
       <div className="bg-customblue w-full flex justify-center p-4">
+        <Link to="/login" className="bg-transparent">
         <button
-          onClick={() => {
-            setView(!view);
-          }}
           className="border-2 m-2 p-3 bg-customred bg-opacity-70 prose text-xl text-customblack border-customblack shadow-md transition active:translate-y-2"
         >
-          {view === false ? "Go to Login" : "Go to Register"}
-        </button>
+          Go To Login
+        </button></Link>
       </div>
 
       {/* REGISTER PAGE */}
-      <div className={view === true ? "hidden" : "bg-customred"}>
+      <div className="">
         <div className=" bg-customblue h-screen">
           <form
             onSubmit={handleSubmit(onSubmitRegister)}
-            autoComplete="off"
             className=" grid justify-items-center bg-transparent"
           >
             <div className="grid justify-items-center bg-transparent p-3">
@@ -152,20 +147,20 @@ const Register = () => {
                 </p>
               )}
             </div>
+
             <button
               type="submit"
               className="bg-customblack drop-shadow-lg border-b-2 border-customwhite rounded-sm p-3 m-2 text-customwhite"
             >
               Submit
             </button>
+
           </form>
         </div>
       </div>
 
       {/* LOGIN PAGE */}
-      <div className={view === false ? "hidden" : " bg-customblue h-screen"}>
-        
-      </div>
+      
     </div>
   );
 };

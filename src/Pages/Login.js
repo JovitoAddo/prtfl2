@@ -1,31 +1,51 @@
-import React from 'react'
-import schema from '../Schema';
+import React from "react";
+import schema from "../Schema";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm({
-        resolver: yupResolver(schema),
-      });
+  const Navigate = useNavigate()
 
-    const onSubmitLogin = () => {
-        // const data = JSON.parse(localStorage.getItem("user"));
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmitLogin = () => {
+    console.log("something should happen")
+    alert("Login")
+    Navigate("/register")
+
     
-        console.log("submit button clicked")
-    
-        // data ? alert("login success") :  alert("login failed");
-    
-        
-        
-      };
+  };
   return (
-    <div>
-         <form
+    <div className="w-full">
+      <div className="flex justify-center">
+        <div className="grid items-end w-full h-36 border-2 border-customblack bg-customblack">
+          <h1 className="bg-transparent text-customwhite text-5xl font-staat text-center cursor-default">
+            Login Here
+          </h1>
+        </div>
+      </div>
+
+      <div className="bg-customblue w-full flex justify-center p-4">
+        <Link to="/register" className="bg-transparent">
+          <button
+            onClick={() => {}}
+            className="border-2 m-2 p-3 bg-customred bg-opacity-70 prose text-xl text-customblack border-customblack shadow-md transition active:translate-y-2"
+          >
+            Go To Register
+          </button>
+        </Link>
+      </div>
+
+      <div className="bg-customblue h-screen">
+        <form
           onSubmit={handleSubmit(onSubmitLogin)}
           className=" grid justify-items-center bg-transparent"
         >
@@ -87,9 +107,11 @@ const Login = () => {
           >
             Submit
           </button>
-        </form>
-    </div>
-  )
-}
 
-export default Login
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
