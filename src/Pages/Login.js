@@ -17,9 +17,9 @@ const Login = () => {
   });
 
   const onSubmitLogin = () => {
-    console.log("something should happen")
-    alert("Login")
-    Navigate("/register")
+    const dataUser = JSON.parse(localStorage.getItem("user"));
+
+    dataUser !== null ? Navigate("/cart") : alert("Your Account Did Not Exist, Please Register First")
 
     
   };

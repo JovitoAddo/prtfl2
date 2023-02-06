@@ -7,6 +7,7 @@ import NotFound from "./Pages/NotFound";
 import ItemPage from "./Pages/ItemPage";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
+import Cart from "./Pages/Cart";
 // import MenWear from "./Pages/MenWear";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='*' element={<NotFound/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/cart' element={<Cart/>}/>
       </Routes>
       <Footer/>
     </div>

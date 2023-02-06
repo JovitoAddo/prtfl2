@@ -19,7 +19,7 @@ const Register = () => {
 
   const onSubmitRegister = (formValue) => {
     console.log(formValue);
-    // localStorage.setItem("userData", JSON.stringify(formValue));
+    localStorage.setItem("userData", JSON.stringify(formValue));
     alert("Register Completed");
     Navigate("/login")
   };
