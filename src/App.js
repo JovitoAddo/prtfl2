@@ -8,9 +8,12 @@ import ItemPage from "./Pages/ItemPage";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Cart from "./Pages/Cart";
+// import { useContext } from "react";
+// import { Context } from "./AppContext";
 // import MenWear from "./Pages/MenWear";
 
 function App() {
+  // const {isLogin} = useContext(Context)
   return (
     <div className="App">
       <Navbar/>

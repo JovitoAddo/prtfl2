@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import schema from "../Schema";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../AppContext";
 
 const Login = () => {
 
   const Navigate = useNavigate()
+
+  // const {setIsLogin} = useContext(Context)
 
   const {
     register,
@@ -17,9 +20,13 @@ const Login = () => {
   });
 
   const onSubmitLogin = () => {
-    const dataUser = JSON.parse(localStorage.getItem("user"));
+    // setIsLogin(true)
+    // localStorage.setItem('isLogin',true)
+    
 
-    dataUser !== null ? Navigate("/cart") : alert("Your Account Did Not Exist, Please Register First")
+    // const dataUser = JSON.parse(localStorage.getItem("user"));
+
+    // dataUser !== null ? Navigate("/cart") : alert("Your Account Did Not Exist, Please Register First")
 
     
   };
