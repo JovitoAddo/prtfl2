@@ -14,7 +14,7 @@ const Login = () => {
     register,
     handleSubmit,
     formState: { errors },
-    getValues
+    getValues,
   } = useForm({
     resolver: yupResolver(schema),
   });
@@ -22,17 +22,27 @@ const Login = () => {
   const dataUser = JSON.parse(localStorage.getItem("userData"));
 
   const submitLogin = (e) => {
+    e.preventDefault();
 
-    e.preventDefault()
+    if (
+      getValues("loginEmail") === dataUser.email &&
+      getValues("loginPassword") === dataUser.password
+    ) {
+      alert("login Success");
+      localStorage.setItem('isLogin',true)
+      Navigate("/cart");
+    } else {
+    }
+    alert("Wrong Email or Password");
 
-    getValues("loginEmail") === dataUser.email &&
-    getValues("loginPassword") === dataUser.password
-      ? alert("login Success")
-      : alert("Wrong Email or Password");
+    // getValues("loginEmail") === dataUser.email &&
+    // getValues("loginPassword") === dataUser.password
+    //   ? alert("login Success")
+    //   : alert("Wrong Email or Password");
 
-      setIsLogin()
+    // JSON.stringify("isLogin", true);
 
-      Navigate("/cart")
+    // Navigate("/cart");
 
     // const dataUser = JSON.parse(localStorage.getItem("user"));
 
@@ -50,19 +60,14 @@ const Login = () => {
 
       <div className="bg-customblue w-full flex justify-center p-4">
         <Link to="/register" className="bg-transparent">
-          <button
-            className="border-2 m-2 p-3 bg-customred bg-opacity-70 prose text-xl text-customblack border-customblack shadow-md transition active:translate-y-2"
-          >
+          <button className="border-2 m-2 p-3 bg-customred bg-opacity-70 prose text-xl text-customblack border-customblack shadow-md transition active:translate-y-2">
             Go To Register
           </button>
         </Link>
       </div>
 
       <div className="bg-customblue h-screen">
-        <form
-          
-          className=" grid justify-items-center bg-transparent"
-        >
+        <form className=" grid justify-items-center bg-transparent">
           <div className="grid justify-items-center bg-transparent p-3">
             <label
               htmlFor="email"

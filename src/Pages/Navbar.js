@@ -115,7 +115,7 @@ const Navbar = () => {
                 </svg>
               </Link>
             ) : ( */}
-              <Link to="/login" className="bg-transparent">
+              <Link to="/cart" className="bg-transparent">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-shopping-cart-plus active:cursor-pointer transition active:scale-150 active:fill-customblack active:stroke-customred bg-transparent"
