@@ -3,32 +3,40 @@ import schema from "../Schema";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useNavigate } from "react-router-dom";
-import { Context } from "../AppContext";
+import { Context } from "../UserProvider";
 
 const Login = () => {
+  const Navigate = useNavigate();
 
-  const Navigate = useNavigate()
-
-  // const {setIsLogin} = useContext(Context)
+  const { setIsLogin } = useContext(Context);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
+    getValues
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmitLogin = () => {
-    // setIsLogin(true)
-    // localStorage.setItem('isLogin',true)
-    
+  const dataUser = JSON.parse(localStorage.getItem("userData"));
+
+  const submitLogin = (e) => {
+
+    e.preventDefault()
+
+    getValues("loginEmail") === dataUser.email &&
+    getValues("loginPassword") === dataUser.password
+      ? alert("login Success")
+      : alert("Wrong Email or Password");
+
+      setIsLogin()
+
+      Navigate("/cart")
 
     // const dataUser = JSON.parse(localStorage.getItem("user"));
 
     // dataUser !== null ? Navigate("/cart") : alert("Your Account Did Not Exist, Please Register First")
-
-    
   };
   return (
     <div className="w-full">
@@ -43,7 +51,6 @@ const Login = () => {
       <div className="bg-customblue w-full flex justify-center p-4">
         <Link to="/register" className="bg-transparent">
           <button
-            onClick={() => {}}
             className="border-2 m-2 p-3 bg-customred bg-opacity-70 prose text-xl text-customblack border-customblack shadow-md transition active:translate-y-2"
           >
             Go To Register
@@ -53,7 +60,7 @@ const Login = () => {
 
       <div className="bg-customblue h-screen">
         <form
-          onSubmit={handleSubmit(onSubmitLogin)}
+          
           className=" grid justify-items-center bg-transparent"
         >
           <div className="grid justify-items-center bg-transparent p-3">
@@ -109,12 +116,11 @@ const Login = () => {
           </div>
 
           <button
-            type="submit"
+            onClick={submitLogin}
             className="bg-customblack drop-shadow-lg border-b-2 border-customwhite rounded-sm p-3 m-2 text-customwhite"
           >
             Submit
           </button>
-
         </form>
       </div>
     </div>

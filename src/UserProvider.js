@@ -2,20 +2,20 @@ import React, {  createContext, useState, useEffect } from "react";
 
 export const Context = createContext();
 
-function AppContext({ Children }) {
+function UserProvider({ children }) {
     
   const [isLogin, setIsLogin] = useState(false);
 
-//   useEffect(() => {
-//     const dataLogin = JSON.parse(localStorage.getItem("isLogin"));
-//     setIsLogin(dataLogin);
-//   }, []);
+  useEffect(() => {
+    const dataLogin = JSON.parse(localStorage.getItem("isLogin"));
+    setIsLogin(dataLogin);
+  }, []);
 
   return (
     <Context.Provider value={{ isLogin, setIsLogin }}>
-      {Children}
+      {children}
     </Context.Provider>
   );
 }
 
-export default AppContext;
+export default UserProvider;

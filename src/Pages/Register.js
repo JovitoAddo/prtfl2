@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import schema from "../Schema";
 import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../UserProvider";
 
 const Register = () => {
   const {
@@ -15,13 +16,13 @@ const Register = () => {
     resolver: yupResolver(schema),
   });
 
-  const Navigate = useNavigate()
+  const Navigate = useNavigate();
 
   const onSubmitRegister = (formValue) => {
     console.log(formValue);
     localStorage.setItem("userData", JSON.stringify(formValue));
     alert("Register Completed");
-    Navigate("/login")
+    Navigate("/login");
   };
 
   return (
@@ -36,11 +37,10 @@ const Register = () => {
 
       <div className="bg-customblue w-full flex justify-center p-4">
         <Link to="/login" className="bg-transparent">
-        <button
-          className="border-2 m-2 p-3 bg-customred bg-opacity-70 prose text-xl text-customblack border-customblack shadow-md transition active:translate-y-2"
-        >
-          Go To Login
-        </button></Link>
+          <button className="border-2 m-2 p-3 bg-customred bg-opacity-70 prose text-xl text-customblack border-customblack shadow-md transition active:translate-y-2">
+            Go To Login
+          </button>
+        </Link>
       </div>
 
       {/* REGISTER PAGE */}
@@ -154,13 +154,11 @@ const Register = () => {
             >
               Submit
             </button>
-
           </form>
         </div>
       </div>
 
       {/* LOGIN PAGE */}
-      
     </div>
   );
 };

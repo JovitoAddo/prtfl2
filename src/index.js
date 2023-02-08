@@ -7,17 +7,18 @@ import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./Assets/ScrollToTop";
 import { store } from "./App/store";
 import { Provider } from "react-redux";
-import AppContext from "./AppContext";
+import UserProvider from "./UserProvider";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        {/* <AppContext> */}
+        <UserProvider>
           <ScrollToTop />
           <App />
-        {/* </AppContext> */}
+        </UserProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
