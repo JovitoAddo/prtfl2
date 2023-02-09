@@ -24,29 +24,21 @@ const Login = () => {
   const submitLogin = (e) => {
     e.preventDefault();
 
+    if (dataUser === null) {
+      alert("Wrong Email or Password");
+    }
+
     if (
       getValues("loginEmail") === dataUser.email &&
       getValues("loginPassword") === dataUser.password
     ) {
       alert("login Success");
-      localStorage.setItem('isLogin',true)
+      setIsLogin(true);
+      localStorage.setItem("isLogin", true);
       Navigate("/cart");
     } else {
+      alert("Wrong Email or Password");
     }
-    alert("Wrong Email or Password");
-
-    // getValues("loginEmail") === dataUser.email &&
-    // getValues("loginPassword") === dataUser.password
-    //   ? alert("login Success")
-    //   : alert("Wrong Email or Password");
-
-    // JSON.stringify("isLogin", true);
-
-    // Navigate("/cart");
-
-    // const dataUser = JSON.parse(localStorage.getItem("user"));
-
-    // dataUser !== null ? Navigate("/cart") : alert("Your Account Did Not Exist, Please Register First")
   };
   return (
     <div className="w-full">

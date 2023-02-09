@@ -13,7 +13,9 @@ import { Context } from "./UserProvider";
 // import MenWear from "./Pages/MenWear";
 
 function App() {
-  const isLogin = JSON.parse(localStorage.getItem("isLogin"))
+  // const isLogin = JSON.parse(localStorage.getItem("isLogin"))
+
+  const {isLogin} = useContext(Context)
 
   return (
     <div className="App">
@@ -25,7 +27,7 @@ function App() {
           <Route path='*' element={<NotFound/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/login' element={<Login/>}/>
-          <Route path='/cart' element={isLogin ? <Cart/> : <Login/>}/>
+          <Route path='/cart' element={isLogin === true ? <Cart/> : <Login/>}/>
       </Routes>
       <Footer/>
     </div>
