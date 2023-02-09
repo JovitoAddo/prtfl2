@@ -70,13 +70,13 @@ const Catalogue = () => {
               <span class="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
               <a
                 href="#"
-                class="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white"
+                className="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white"
               >
                 {produk.rating.count + "Reviews"}
               </a>
             </rating>
             <button as div className="flex gap-3 items-end pb-2 bg-transparent">
-              <Link to="/items" className="bg-transparent">
+              <Link to={`/catalogue/${produk.id}`} className="bg-transparent">
                 <button className="border-2 border-customblue rounded-md px-6 bg-transparent hover:scale-125">
                   preview
                 </button>
