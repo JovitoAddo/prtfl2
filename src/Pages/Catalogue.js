@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 import Brand from "../Assets/Content/brandlogo";
 import Models from "../Assets/Content";
 
 import "swiper/css";
 import axios from "axios";
+import Spinners from "../Components/Spinners";
 
 const Catalogue = () => {
   const [product, setProduct] = useState([]);
@@ -35,6 +39,7 @@ const Catalogue = () => {
         </div>
       </div>
 
+      {product.length > 0 ? 
       <div className="min-h-screen grid justify-items-center p-2 gap-8">
         {product.filter((produk)=>produk.category == "men's clothing").map((produk, index)=>(
           <div key={index}>
@@ -92,8 +97,11 @@ const Catalogue = () => {
         </catalog>
           </div>
         ))}
-        
-      </div>
+        </div>
+        :  
+      <Spinners/>} 
+
+      
     </>
   );
 };

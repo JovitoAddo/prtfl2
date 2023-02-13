@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Models from "../Assets/Content";
 import StarRating from "../Components/StarRating";
 
+import axios from "axios";
+import { useParams } from "react-router-dom";
+
 const ItemPage = () => {
+
+  const [product, setProduct] = useState([]);
+
+  let { id } = useParams();
+
+  const getData = async () => {
+    const { data } = await axios.get("https://fakestoreapi.com/products"`${id}`);
+
+    setProduct(data)
+  };
+
+  useEffect(() => {
+    getData()
+    console.log(getData)
+  }, [])
+
+
   return (
     <div className="min-h-screen">
       <header
@@ -11,7 +31,7 @@ const ItemPage = () => {
         className="grid items-end h-36 border-2 border-customblack bg-gradient-to-r from-customblue to-customred"
       >
         <h1 className="bg-transparent text-customwhite text-5xl font-staat text-center">
-          *Items Name*
+          {product.name}
         </h1>
       </header>
 
