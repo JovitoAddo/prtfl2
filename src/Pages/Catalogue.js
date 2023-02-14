@@ -73,12 +73,11 @@ const Catalogue = () => {
                 {produk.rating.rate}
               </p>
               <span class="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
-              <a
-                href="#"
-                className="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white"
+              <p
+                className="text-sm font-medium text-gray-900 dark:text-white"
               >
-                {produk.rating.count + "Reviews"}
-              </a>
+                {produk.rating.count + " Rating"}
+              </p>
             </rating>
             <button as div className="flex gap-3 items-end pb-2 bg-transparent">
               <Link to={`/catalogue/${produk.id}`} className="bg-transparent">
