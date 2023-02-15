@@ -4,7 +4,9 @@ import StarRating from "../Components/StarRating";
 
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import RecommendationProduct from "../Components/recommendationProduct";
+// import RecommendationProduct from "../Components/recommendationProduct";
+import Recommend from "../Components/Recommend";
+import Spinners from "../Components/Spinners";
 
 
 const ItemPage = () => {
@@ -36,6 +38,8 @@ const ItemPage = () => {
         </h1>
       </header>
 
+
+  {/* {product.length == 0 ?  */}
       <body as div className="grid pt-5 border-2 border-customblue p-4 m-4">
         <div className="grid sm:flex justify-around gap-3 p-4 border-b-2 border-customred">
           <img
@@ -66,10 +70,10 @@ const ItemPage = () => {
         </div>
 
         <comments as div className="">
-          {/* <RecommendationProduct/> */}
-          COMMENTS OR RECOMENDATION OR SOMETHING, NOT FINISHED
+          <Recommend/>
         </comments>
-      </body>
+      </body> 
+      {/* :<Spinners/>} */}
     </div>
   );
 };
